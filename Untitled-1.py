@@ -1,5 +1,4 @@
 import discord
-token = 'OTMxODg3OTIxMzI4NDUxNTg0.YeK-Qg.b3rXaiiJ9CIsW123MVT8q1YjfXY'
 client = discord.Client()
 @client.event
 async def on_ready():
@@ -17,5 +16,5 @@ async def on_ready(): # 봇이 실행되면 한 번 실행됨
 async def on_message(message):
     if message.content == '심채편':
         await message.channel.send('잘생김!')
-
-client.run(token)
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
